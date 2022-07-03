@@ -53,14 +53,21 @@ string [] FillArray(int lenght)
     return arr;
 }
 
-
+void PrintArray(string [] array)
+{
+    int length = array.Length;
+    for (int i = 0; i < length; i++)
+    {
+        Console.Write(array[i]);
+    }
+}
 string message = "Input array lenght";
 
 int ararayLenght = GetArrayLenght(message);
 
 string [] originalArray = FillArray(ararayLenght);
 
-
+PrintArray(originalArray);
 
 
 
