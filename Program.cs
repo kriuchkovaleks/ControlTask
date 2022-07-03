@@ -58,7 +58,6 @@ string message = "Input array lenght";
 
 int ararayLenght = GetArrayLenght(message);
 
-
 string [] originalArray = FillArray(ararayLenght);
 
 
