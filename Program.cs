@@ -11,8 +11,42 @@
 */
 
 
+int GetArrayLenght(string msg)
+{
+    while (true)
+    {
+        Console.WriteLine(msg);
+        string valueFromConsole = Console.ReadLine();
+
+        if (int.TryParse(valueFromConsole, out int number))
+        {
+            if (number > 0)
+                return number;
+            else
+            {
+                Console.WriteLine("Число должно быть больше 0. Введите другое число");
+            }
+        }
+        else
+        {
+            Console.WriteLine("Вы ввели не число. Нужно ввести число, больше 0.");
+        }
+    }
+}
+
+
+/*
+string [] FillArray (int ararayLenght)
+{
+
+}
+*/
+
+string message = "Input array lenght";
+
+int ararayLenght = GetArrayLenght(message);
 
 
 
-Console.WriteLine("Input array length");
-int ararayLenght = Convert.ToInt32(Console.ReadLine());
+
+
