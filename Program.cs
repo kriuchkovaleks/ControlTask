@@ -1,5 +1,7 @@
 ﻿/*
-**Задача**: Написать программу, которая из имеющегося массива строк формирует массив из строк, длина которых меньше либо равна 3 символа. Первоначальный массив можно ввести с клавиатуры, либо задать на старте выполнения алгоритма. При решении не рекомендуется пользоваться коллекциями, лучше обойтись исключительно массивами.
+**Задача**: Написать программу, которая из имеющегося массива строк формирует массив из строк, длина которых меньше либо равна 3 символа. 
+Первоначальный массив можно ввести с клавиатуры, либо задать на старте выполнения алгоритма.
+ При решении не рекомендуется пользоваться коллекциями, лучше обойтись исключительно массивами.
 
 **Примеры**:
 
@@ -24,27 +26,40 @@ int GetArrayLenght(string msg)
                 return number;
             else
             {
-                Console.WriteLine("Число должно быть больше 0. Введите другое число");
+                Console.WriteLine("Number must be more than 0. Input another number");
             }
         }
         else
         {
-            Console.WriteLine("Вы ввели не число. Нужно ввести число, больше 0.");
+            Console.WriteLine("You have typed not number. Input number more than 0");
         }
     }
 }
 
 
-/*
-string [] FillArray (int ararayLenght)
-{
 
+string [] FillArray(int lenght)
+{
+    string[] arr = new string[lenght];
+
+    for (int i = 0; i < lenght; i++)
+    {
+        Console.WriteLine("Input array element");
+        arr[i] = Console.ReadLine();
+
+    }
+
+
+    return arr;
 }
-*/
+
 
 string message = "Input array lenght";
 
 int ararayLenght = GetArrayLenght(message);
+
+
+string [] originalArray = FillArray(ararayLenght);
 
 
 
